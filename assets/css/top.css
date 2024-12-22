@@ -1,0 +1,224 @@
+/* Top Games Section Styles */
+.top-games-section {
+    padding: 4rem 1.25rem;
+    background: linear-gradient(to bottom, #000, #0a0a0a);
+    color: #fff;
+    position: relative;
+}
+
+/* Section Title Styling */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #00b300;
+    text-shadow: 0 0 10px rgba(0, 179, 0, 0.3);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #00b300;
+    margin: 1rem auto;
+    border-radius: 2px;
+}
+
+/* Games Grid Layout */
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Game Card Styling */
+.game-card {
+    background: linear-gradient(145deg, #1c1c1c, #242424);
+    border-radius: 0.8rem;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    aspect-ratio: 16 / 19;
+}
+
+.game-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 179, 0, 0.2);
+    border-color: rgba(0, 179, 0, 0.3);
+}
+
+/* Game Card Image */
+.game-card img {
+    width: 100%;
+    height: 65%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.5s ease, filter 0.3s ease;
+    border-bottom: 2px solid rgba(0, 179, 0, 0.2);
+}
+
+.game-card:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Game Card Content */
+.game-card h3 {
+    margin-top: 0.75rem;
+    padding: 0 0.75rem;
+    font-size: 1.25rem;
+    position: relative;
+    z-index: 2;
+    color: #00ff00;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+    transition: color 0.3s ease;
+}
+
+.game-card:hover h3 {
+    color: #00ff00;
+}
+
+.game-price {
+    margin-top: 0.3rem;
+    padding: 0.3rem 0.75rem;
+    position: relative;
+    z-index: 2;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.game-price::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #00b300;
+    transition: width 0.3s ease;
+}
+
+.game-card:hover .game-price::before {
+    width: 80%;
+}
+
+/* Button Styling */
+.game-card .btn-more {
+    display: inline-block;
+    margin: 0.75rem 0 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #00b300;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+}
+
+.game-card .btn-more:hover {
+    background-color: transparent;
+    border-color: #00b300;
+    color: #00ff00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 179, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .games-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-games-section {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .game-card {
+        max-width: 300px;
+        margin: 0 auto;
+        aspect-ratio: 16 / 21;
+    }
+
+    .game-card img {
+        height: 60%;
+    }
+
+    .game-card::before {
+        height: 60%;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .game-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .game-price {
+        font-size: 1rem;
+    }
+
+    .game-card .btn-more {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .game-card {
+        aspect-ratio: 16 / 22;
+    }
+
+    .game-card img {
+        height: 55%;
+    }
+
+    .game-card::before {
+        height: 55%;
+    }
+}
+
+/* Loading Animation */
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.game-card {
+    animation: cardFadeIn 0.6s ease-out forwards;
+}
+
+.games-grid > *:nth-child(1) { animation-delay: 0.1s; }
+.games-grid > *:nth-child(2) { animation-delay: 0.2s; }
+.games-grid > *:nth-child(3) { animation-delay: 0.3s; }
+.games-grid > *:nth-child(4) { animation-delay: 0.4s; }
+  

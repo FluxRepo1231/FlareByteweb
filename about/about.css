@@ -1,0 +1,279 @@
+@import url('../assets/css/Nav.css');
+@import url('../styles.css');
+@import url('../assets/css/footer.css');
+@import url('../404.css');
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url('https://wallpapercave.com/wp/wp2940341.png');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100%;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #2ecc71;
+    text-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 8rem 0;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    animation: fadeIn 1s ease-out;
+    border: 1px solid rgba(46, 204, 113, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 20px rgba(46, 204, 113, 0.5);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero .btn {
+    padding: 1rem 2.5rem;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+}
+
+.hero .btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(46, 204, 113, 0.4);
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+}
+
+/* About Us Section */
+.about-us {
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.about-us h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(46, 204, 113, 0.4);
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #2ecc71;
+    text-shadow: 0 0 10px rgba(46, 204, 113, 0.3);
+}
+
+/* Team Section */
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    padding: 0 1rem;
+}
+
+.team-member {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(46, 204, 113, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 35px rgba(46, 204, 113, 0.2);
+    border-color: rgba(46, 204, 113, 0.2);
+}
+
+.team-member-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 4px solid rgba(46, 204, 113, 0.3);
+    transition: all 0.4s ease;
+    object-fit: cover;
+}
+
+.team-member:hover .team-member-img {
+    transform: scale(1.05) rotate(5deg);
+    border-color: #2ecc71;
+    box-shadow: 0 0 20px rgba(46, 204, 113, 0.4);
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    color: #2ecc71;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.team-member .btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(45deg, #2ecc71, #27ae60);
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 2rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.team-member .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(46, 204, 113, 0.3);
+    background: linear-gradient(45deg, #27ae60, #2ecc71);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        padding: 6rem 0;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .about-us {
+        padding: 5rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .about-us h1 {
+        font-size: 2.5rem;
+    }
+
+    .about-us h2 {
+        font-size: 2rem;
+    }
+
+    .team {
+        gap: 1.5rem;
+    }
+
+    .team-member {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 4rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero .btn {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+
+    .about-us h1 {
+        font-size: 2rem;
+    }
+
+    .team-member-img {
+        width: 120px;
+        height: 120px;
+    }
+}
